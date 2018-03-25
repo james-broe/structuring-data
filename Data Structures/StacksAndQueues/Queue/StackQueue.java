@@ -1,5 +1,7 @@
 import java.util.*;
 
+// Queue implemented with two stacks
+
 class StackQueue<E> {
 
   private Stack<E> myStack;
@@ -18,7 +20,8 @@ class StackQueue<E> {
     return e;
   }
 
-  public E dequeue() {
+  // Inefficient pls fix
+  public E deque() {
     for (int i = 0; i < this.size; i++) {
       this.helpStack.push(this.myStack.pop());
     }
@@ -41,14 +44,11 @@ class StackQueue<E> {
     sq.queue(3);
     sq.queue(4);
     sq.queue(5);
-    System.out.println(sq.dequeue());
-    System.out.println(sq.dequeue());
-    System.out.println(sq.dequeue());
-    System.out.println(sq.dequeue());
-    System.out.println(sq.dequeue());
+    System.out.println(sq.deque());
+    System.out.println(sq.deque());
+    System.out.println(sq.deque());
+    System.out.println(sq.deque());
+    System.out.println(sq.deque());
   }
-
-
-
 
 }
