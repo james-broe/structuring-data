@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Stack<E> {
+class ArrayStack<E> {
 
   private E[] array;
   private int top;
