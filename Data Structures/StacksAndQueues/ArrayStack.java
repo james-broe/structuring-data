@@ -8,7 +8,7 @@ class ArrayStack<E> {
 
     // Constructors
   @SuppressWarnings("unchecked")
-  public Stack() {
+  public ArrayStack() {
       this.capacity = 10;
       this.top = -1;
       this.array = (E[]) new Object[this.capacity];
@@ -62,7 +62,7 @@ class ArrayStack<E> {
   }
 
   public static void main(String[] args) {
-    Stack<Integer> myStack = new Stack<Integer>();
+    ArrayStack<Integer> myStack = new ArrayStack<Integer>();
     System.out.println(myStack.isEmpty());
     myStack.push(1);
     myStack.push(5);
